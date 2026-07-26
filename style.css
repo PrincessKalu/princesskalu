@@ -799,26 +799,23 @@
   position:relative;
   z-index:2;
   margin-top:auto;
-  padding:5vh 5vw;
-  max-width:660px;
-  background:rgba(250,244,231,.82);
-  backdrop-filter:blur(6px);
-  -webkit-backdrop-filter:blur(6px);
-  border-radius:0 18px 0 0;
-  box-shadow:0 8px 40px rgba(33,26,18,.12);
+  padding:6vh 6vw 8vh;
+  max-width:720px;
 }
 .hero-fullbleed-content .home-hero-title,
-.hero-fullbleed-content .home-hero-sub{ color:var(--ink); }
-.hero-fullbleed-content .home-hero-desc{ color:var(--ink-soft); }
-.hero-fullbleed-content .eyebrow{ color:var(--gold-deep); }
-.hero-fullbleed-content .divider{ background:rgba(33,26,18,.25); }
-.hero-fullbleed-content .divider::after{ background:transparent; color:var(--gold-deep); }
-.hero-fullbleed-content .client-row span{ color:var(--ink); }
-.hero-fullbleed-content .client-row .sep{ color:rgba(33,26,18,.4); }
-.hero-fullbleed-content .client-sub{ color:var(--ink-soft) !important; }
-.hero-fullbleed-content .btn-outline{ border-color:rgba(33,26,18,.4); color:var(--ink); }
-.hero-fullbleed-content .btn-outline:hover{ border-color:var(--gold-deep); color:var(--gold-deep); }
-.hero-fullbleed-content .eyebrow-row .dash{ background:var(--gold-deep); }
+.hero-fullbleed-content .home-hero-sub{ color:var(--cream); }
+.hero-fullbleed-content .home-hero-desc{ color:var(--cream); }
+.hero-fullbleed-content .eyebrow{ color:var(--cream); }
+.hero-fullbleed-content .divider{ background:rgba(250,244,231,.4); }
+.hero-fullbleed-content .divider::after{ background:transparent; color:var(--cream); }
+.hero-fullbleed-content .client-row span{ color:var(--cream); }
+.hero-fullbleed-content .client-row .sep{ color:rgba(250,244,231,.5); }
+.hero-fullbleed-content .client-sub{ color:var(--cream) !important; }
+.hero-fullbleed-content .btn-outline{ border-color:var(--cream); color:var(--cream); }
+.hero-fullbleed-content .btn-outline:hover{ background:var(--cream); color:var(--ink); }
+.hero-fullbleed-content .eyebrow-row .dash{ background:var(--cream); }
+.hero-fullbleed-content .btn-primary{ background:var(--cream); color:var(--ink); }
+.hero-fullbleed-content .btn-primary:hover{ background:var(--cream-deep); }
 
 /* Nav overlaid on the hero photo */
 nav.nav-overlay{

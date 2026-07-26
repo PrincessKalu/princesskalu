@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Princess Kalu</title>
+<meta name="description" content="Get in touch with Princess Kalu, social media manager and digital marketer in Abuja, Nigeria.">
+<meta property="og:title" content="Contact — Princess Kalu">
+<meta property="og:description" content="Get in touch with Princess Kalu, social media manager and digital marketer in Abuja, Nigeria.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Contact — Princess Kalu">
+<meta name="twitter:description" content="Get in touch with Princess Kalu, social media manager and digital marketer in Abuja, Nigeria.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23A9812F'/%3E%3Ctext x='50' y='68' font-size='60' fill='%23FAF4E7' text-anchor='middle' font-family='Georgia,serif'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Work+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-name"><a href="index.html" style="color:inherit; text-decoration:none;">Princess Kalu</a></div>
+  <div class="nav-links" id="navLinks" style="gap:26px;">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link" href="services.html">Services</a>
+    <a class="nav-link" href="work.html">Work</a>
+    <a class="nav-link" href="process.html">Process</a>
+    <a class="nav-link current" href="contact.html">Contact</a>
+  </div>
+  <a href="contact.html" class="nav-cta" style="margin-left:20px;">Let's Work Together</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="contact-page">
+  <p class="eyebrow">Let's Work Together</p>
+  <h1>Got a brand that needs<br><em>a strategy?</em></h1>
+  <div class="contact-links">
+    <a href="tel:+2349136643940">09136643940</a>
+    <a href="mailto:princesskalu49@gmail.com">princesskalu49@gmail.com</a>
+  </div>
+  <p class="location">Abuja, Nigeria</p>
+</div>
+
+
+
+<script>
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.classList.toggle('open', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Process — Princess Kalu</title>
+<meta name="description" content="How Princess Kalu approaches a new social media management project, from audit to reporting.">
+<meta property="og:title" content="Process — Princess Kalu">
+<meta property="og:description" content="How Princess Kalu approaches a new social media management project, from audit to reporting.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Process — Princess Kalu">
+<meta name="twitter:description" content="How Princess Kalu approaches a new social media management project, from audit to reporting.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23A9812F'/%3E%3Ctext x='50' y='68' font-size='60' fill='%23FAF4E7' text-anchor='middle' font-family='Georgia,serif'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Work+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-name"><a href="index.html" style="color:inherit; text-decoration:none;">Princess Kalu</a></div>
+  <div class="nav-links" id="navLinks" style="gap:26px;">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link" href="services.html">Services</a>
+    <a class="nav-link" href="work.html">Work</a>
+    <a class="nav-link current" href="process.html">Process</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+  </div>
+  <a href="contact.html" class="nav-cta" style="margin-left:20px;">Let's Work Together</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page-header">
+  <span class="eyebrow">Process</span>
+  <h1>How a Project Comes Together</h1>
+  <p>No two brands need the same thing, but the path to get there follows the same shape.</p>
+</div>
+<div class="process-steps">
+  <div class="process-step">
+    <div class="num">01</div>
+    <div>
+      <h3>Discovery &amp; Audit</h3>
+      <p>A close look at the brand's current accounts, audience, and competitors &mdash; what's working, what's not, and where the actual opportunity is.</p>
+    </div>
+  </div>
+  <div class="process-step">
+    <div class="num">02</div>
+    <div>
+      <h3>Strategy &amp; Content Pillars</h3>
+      <p>A content strategy built around clear pillars and a real posting cadence, tied to the brand's voice and business goals &mdash; not just trends.</p>
+    </div>
+  </div>
+  <div class="process-step">
+    <div class="num">03</div>
+    <div>
+      <h3>Production &amp; Scheduling</h3>
+      <p>Content calendars, captions, and creative get built and scheduled in advance, so the account stays consistent even on busy weeks.</p>
+    </div>
+  </div>
+  <div class="process-step">
+    <div class="num">04</div>
+    <div>
+      <h3>Paid Amplification</h3>
+      <p>Where it makes sense, Meta Ads campaigns are layered on top &mdash; targeted, tested, and optimized against real budget and ROI goals.</p>
+    </div>
+  </div>
+  <div class="process-step">
+    <div class="num">05</div>
+    <div>
+      <h3>Reporting &amp; Iteration</h3>
+      <p>Performance gets reviewed against the numbers that matter &mdash; reach, engagement, non-follower discovery &mdash; and the strategy adjusts from there.</p>
+    </div>
+  </div>
+</div>
+
+<footer style="padding:60px 6vw; text-align:center; border-top:1px solid var(--line);">
+  <p class="eyebrow" style="margin-bottom:10px;">Princess Kalu</p>
+  <p style="color:var(--ink-soft); font-size:14px; margin-bottom:16px;">Social Media Manager &middot; Abuja, Nigeria</p>
+  <div style="display:flex; gap:24px; justify-content:center; flex-wrap:wrap; font-family:'Space Mono',monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; margin-bottom:16px;">
+    <a href="index.html" style="color:var(--ink-soft);">Home</a>
+    <a href="about.html" style="color:var(--ink-soft);">About</a>
+    <a href="services.html" style="color:var(--ink-soft);">Services</a>
+    <a href="work.html" style="color:var(--ink-soft);">Work</a>
+    <a href="process.html" style="color:var(--ink-soft);">Process</a>
+    <a href="contact.html" style="color:var(--ink-soft);">Contact</a>
+  </div>
+  <p class="fine" style="font-size:11px; color:var(--ink-soft); opacity:.6;">&copy; Princess Kalu &mdash; Digital Marketing Portfolio</p>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.classList.toggle('open', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+</script>
+</body>
+</html>

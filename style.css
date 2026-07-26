@@ -7,6 +7,7 @@
     --gold:#A9812F;
     --gold-deep:#7C5C1F;
     --gold-bright:#C9A227;
+    --gold-hero:#8A5A0B;
     --line:#D9C79E;
     --card:#FFFDF8;
   }
@@ -803,19 +804,20 @@
   max-width:720px;
 }
 .hero-fullbleed-content .home-hero-title,
-.hero-fullbleed-content .home-hero-sub{ color:var(--cream); }
-.hero-fullbleed-content .home-hero-desc{ color:var(--cream); }
-.hero-fullbleed-content .eyebrow{ color:var(--cream); }
-.hero-fullbleed-content .divider{ background:rgba(250,244,231,.4); }
-.hero-fullbleed-content .divider::after{ background:transparent; color:var(--cream); }
-.hero-fullbleed-content .client-row span{ color:var(--cream); }
-.hero-fullbleed-content .client-row .sep{ color:rgba(250,244,231,.5); }
-.hero-fullbleed-content .client-sub{ color:var(--cream) !important; }
-.hero-fullbleed-content .btn-outline{ border-color:var(--cream); color:var(--cream); }
-.hero-fullbleed-content .btn-outline:hover{ background:var(--cream); color:var(--ink); }
-.hero-fullbleed-content .eyebrow-row .dash{ background:var(--cream); }
-.hero-fullbleed-content .btn-primary{ background:var(--cream); color:var(--ink); }
-.hero-fullbleed-content .btn-primary:hover{ background:var(--cream-deep); }
+.hero-fullbleed-content .home-hero-sub{ color:var(--gold-hero); text-shadow:0 1px 14px rgba(250,244,231,.5); }
+.hero-fullbleed-content .home-hero-desc{ color:var(--gold-hero); text-shadow:0 1px 10px rgba(250,244,231,.5); }
+.hero-fullbleed-content .eyebrow{ color:var(--gold-hero); text-shadow:0 1px 10px rgba(250,244,231,.5); }
+.hero-fullbleed-content .divider{ background:rgba(138,90,11,.4); }
+.hero-fullbleed-content .divider::after{ background:transparent; color:var(--gold-hero); }
+.hero-fullbleed-content .client-row span{ color:var(--gold-hero); text-shadow:0 1px 10px rgba(250,244,231,.5); }
+.hero-fullbleed-content .client-row .sep{ color:rgba(138,90,11,.5); }
+.hero-fullbleed-content .client-sub{ color:var(--gold-hero) !important; text-shadow:0 1px 10px rgba(250,244,231,.5); }
+.hero-fullbleed-content .btn-outline{ border-color:var(--gold-hero); color:var(--gold-hero); }
+.hero-fullbleed-content .btn-outline:hover{ background:var(--gold-hero); color:var(--cream); }
+.hero-fullbleed-content .eyebrow-row .dash{ background:var(--gold-hero); }
+.hero-fullbleed-content .btn-primary{ background:var(--ink); color:var(--gold-hero); }
+.hero-fullbleed-content .btn-primary:hover{ background:var(--ink-soft); }
+.hero-fullbleed-content .btn-primary:hover{ background:var(--ink-soft); }
 
 /* Nav overlaid on the hero photo */
 nav.nav-overlay{

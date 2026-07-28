@@ -108,6 +108,62 @@
     });
   });
 
+  // ===== Site-wide motion: scroll progress, reveal-on-scroll, nav elevation =====
+  document.documentElement.classList.add('js');
+
+  // Scroll progress bar
+  const progressBar = document.createElement('div');
+  progressBar.className = 'scroll-progress';
+  document.body.appendChild(progressBar);
+  const updateProgress = () => {
+    const h = document.documentElement;
+    const scrolled = h.scrollTop || document.body.scrollTop;
+    const height = (h.scrollHeight || document.body.scrollHeight) - h.clientHeight;
+    progressBar.style.width = height > 0 ? (scrolled / height) * 100 + '%' : '0%';
+  };
+  document.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+
+  // Nav elevation on scroll
+  const siteNav = document.querySelector('nav');
+  const updateNavShadow = () => {
+    if (!siteNav) return;
+    siteNav.classList.toggle('scrolled', (window.scrollY || document.documentElement.scrollTop) > 8);
+  };
+  document.addEventListener('scroll', updateNavShadow, { passive: true });
+  updateNavShadow();
+
+  // Reveal-on-scroll for recurring content blocks
+  const revealTargets = document.querySelectorAll(
+    '.page-header, .section-head, .home-hero-clients, .brand-row, .skill-group, .tool-chip, .cap-item, .proof-gallery figure, .process-step, .testi-card, .timeline-item, .about-section, .about-img-wrap, .contact-links, .certs'
+  );
+  revealTargets.forEach((el, i) => {
+    el.classList.add('reveal');
+    el.style.transitionDelay = Math.min((i % 6) * 70, 350) + 'ms';
+  });
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealTargets.forEach(el => revealObserver.observe(el));
+  } else {
+    revealTargets.forEach(el => el.classList.add('visible'));
+  }
+
+  // Gentle entrance for the hero copy on first load
+  const heroCopy = document.querySelector('.home-hero-copy');
+  if (heroCopy) {
+    Array.from(heroCopy.children).forEach((el, i) => {
+      el.classList.add('hero-in');
+      el.style.animationDelay = (i * 0.09) + 's';
+    });
+  }
+
 </script>
 </body>
 </html>
